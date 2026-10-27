@@ -10,6 +10,11 @@ date-format: long
 
 \[\~ 200 words\]
 
+```{r}
+data(world)
+ggplot(warpbreaks, aes(warpbreaks$breaks, fill = "red")) + geom_hist()
+```
+
 Clearly stated background and questions / hypotheses / problems being addressed. Sets up the analysis in an interesting and compelling way. Include figures if you like.
 
 # Materials and methods

@@ -1,5 +1,5 @@
 ---
-title: "Upstate NY Parks Project"
+title: "Upstate NY Parks Project 3.0"
 author: Your name here
 subtitle: Subtitle here if desired
 date: today

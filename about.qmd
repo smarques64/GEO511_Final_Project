@@ -1,8 +1,30 @@
 ---
-title: "About"
+title: "Analyzing the distribution of population and access to Upstate NY State Parks and state owned environmental lands". 
 ---
 
-About this site
+# Introduction & Reasoning 
+
+New York State (NYS) has the largest number of state parks (not area) of any state in the United States. Along with this there are numerous environmental lands owned by the NYS Department of Environmental Conservation (NYS DEC) including State Forests, Wildlife Management Areas and all environmental land in the Adirondack and Catskill parks. Despite New Yorkers across the state paying for this land, there are obvious spatial discrepancies giving easier access to people living in certain areas of the state, allowing them more options for a day trip to hike or partake in other recreational activities. 
+
+However, what is not known is the exact degree of access different population centers have to these lands. For example, does Rochester or Buffalo have easier access? Or where does most of the Upstate NY population fall in terms of access? Through this research I plan to answer the following questions: 
+
+1: Which large population clusters have the greatest day-access to NYS Parks or NYS DEC lands or both? 
+
+2: What is the general range of access across these population clusters? (do the southeast suburbs or the northwest suburbs of Rochester get better access?)
+
+3: Where does most of upstate NY fall on a distribution of population and number of parks and DEC lands within range? (does the vast majority of the state have lesser access then most rural areas or somewhere in the middle?)
+
+# Data Download
+
+Spatial data of NYS Park Owned Lands: 
+
+Spatial data of NYS DEC Owned Lands: 
+
+Population Raster: 
+
+
+
+
 
 ```{r}
 2 + 2

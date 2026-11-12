@@ -11,6 +11,8 @@ date-format: long
 \[\~ 200 words\]
 
 ```{r}
+install.packages("tidyverse")
+library(ggplot2)
 data(world)
 ggplot(warpbreaks, aes(warpbreaks$breaks, fill = "red")) + geom_hist()
 ```

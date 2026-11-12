@@ -1,14 +1,12 @@
 ---
-title: "Upstate NY Parks Project 3.0"
-author: Your name here
-subtitle: Subtitle here if desired
+title: "Upstate NY Parks Project"
+author: Samuel Marques 
+subtitle: "Analyzing the distribution of population and access to Upstate NY State Parks and state owned environmental lands"
 date: today
 date-format: long
 ---
 
-# Introduction 2 
-
-\[\~ 200 words\]
+# Introduction & Reasoning 
 
 New York State (NYS) has the largest number of state parks (not area) of any state in the United States. Along with this there are numerous environmental lands owned by the NYS Department of Environmental Conservation (NYS DEC) including State Forests, Wildlife Management Areas and all environmental land in the Adirondack and Catskill parks. Despite New Yorkers across the state paying for this land, there are obvious spatial discrepancies giving easier access to people living in certain areas of the state, allowing them more options for a day trip to hike or partake in other recreational activities. 
 
@@ -20,72 +18,176 @@ However, what is not known is the exact degree of access different population ce
 
 3: Where does most of upstate NY fall on a distribution of population and number of parks and DEC lands within range? (does the vast majority of the state have lesser access then most rural areas or somewhere in the middle?)
 
-# Materials and methods
+## Data Download
 
-\[\~ 200 words\]
+# Spatial data of NYS Park Owned Lands: 
+Download shapefile 
 
-Narrative: Clear narrative description of the data sources and methods. Includes data from at least two sources that were integrated / merged in R.
+Link: https://data.gis.ny.gov/datasets/17994e0b601e40ab8d52504971304d36/explore?location=42.772750%2C-75.716874%2C6
 
-Code: The code associated with the project is well organized and easy to follow. Demonstrates mastery of R graphics and functions.
+# Spatial data of NYS DEC Owned Lands: 
+Download shapefile
 
-Data: The underlying data are publicly accessible via the web and downloaded/accessed within the Rmd script. If you want to use your own data, you must make it available on a website (e.g. Figshare) so that others are able to re-run your code.
+Link: https://data.gis.ny.gov/datasets/84b4cce8a8974c31a1c5584540f3aaae/explore?location=45.849978%2C-76.858538%2C7
 
-You can do bullets like this:
+# Population Raster: 
+Download raster
 
--   The first most important thing
--   The second most important thing
--   The third most important thing
+Link: https://search.earthdata.nasa.gov/search/granules?p=C3540918004-ESDIS&pg[0][v]=f&pg[0][gsk]=-start_date&g=G3553496284-ESDIS&long=3.5942492012779557&zoom=2.290018846932618
 
-You can do numbers like this:
+# Other: 
+Tigris County Subdivision + US State Shapefiles will be downloaded in code. 
 
-1.  The first most important thing
-2.  The second most important thing
-3.  The third most important thing
 
-See <http://rmarkdown.rstudio.com/> for all the amazing things you can do.
+## Methods:
 
-Here's my first code chunk.
-
+# Part 0: Loading necessary libraries
 ```{r}
-x=3+4
-```
-
-Refer to output in your narrative like this: x=`r x` .
-
-Load any required packages in a code chunk (you may need to install some packages):
-
-```{r, message=F, warning=F}
+library(tigris)
+library(terra)
+library(tibble)
 library(tidyverse)
-library(leaflet)
-library(kableExtra)
-library(htmlwidgets)
-library(widgetframe)
-knitr::opts_chunk$set(widgetframe_widgets_dir = 'widgets' ) 
-knitr::opts_chunk$set(cache=TRUE)  # cache the results for quick compiling
+library(sf)
+library(dplyr)
+library(osrm)
 ```
 
-## Download and clean all required data
+# Part 1a: Creating Population Density Raster within defined Upstate NY Area 
 
 ```{r}
-n=20
-data=data.frame(x=runif(n,-180,180),
-                y=runif(n,-60,60),
-                size = runif(n, 5, 20),
-                category = factor(
-                  sample(letters[1:5], n, replace = TRUE)
-                  ),
-                value = rnorm(n))
+Pop_RasterWorld <- rast("gpw_v4_population_count_rev11_2020_30_sec.tif")
+NYS_Counties <- tigris::county_subdivisions(state = "NY", cb = TRUE)
+United_States <- tigris::states(cb = TRUE)
 ```
 
-```{r, results='asis'}
-data %>% 
-  slice(1:10) %>% #show only 1:n rows
-  kable(digits=2,align="c")%>% #make table and round to two digits
-  kable_styling(bootstrap_options = 
-                  c("striped", "hover", "condensed", "responsive")) #apply other formatting
+This gets the population raster along with plots of NYS County Subdivisions + US States from Tigris. The latter two shapefiles will be used to crop the raster to our desired upstate region. 
+
+```{r}
+NYS_Counties2 <- NYS_Counties |>
+  filter_out(NAMELSADCO == "Suffolk County") |>
+  filter_out(NAMELSADCO == "Nassau County") |>
+  filter_out(NAMELSADCO == "Queens County") |>
+  filter_out(NAMELSADCO == "Kings County") |>
+  filter_out(NAMELSADCO == "New York County") |>
+  filter_out(NAMELSADCO == "Richmond County") |>
+  filter_out(NAMELSADCO == "Bronx County") |>
+  filter_out(NAMELSADCO == "Westchester County") |>
+  filter_out(NAMELSADCO == "Rockland County")
+```
+Excluding counties that are classified as "Downstate" for this project. 
+
+```{r, warning=F}
+United_States_Keep <- c("NY", "PA", "NJ", "VT", "CT", "MA")
+United_States2 <- United_States |> filter(STUSPS %in% United_States_Keep)
+# creates united states to clip raster to with just the 6 bordering states.
+#view(United_States2)
+
+Pop_Rasterworld2 <- crop(Pop_RasterWorld, United_States2, mask = TRUE)
+``` 
+Cropping the raster to nearby states, a warning message will be received that they do not have the same coordinate system, this is true. This first crop is done to speed up projection to match the raster coordinate system to a common system that is already used by the Tigris files. 
+
+```{r}
+target_crs <- "EPSG:4269"
+Pop_Rasterworld3 <- project(Pop_Rasterworld2, target_crs, method = "bilinear")
+st_crs(Pop_Rasterworld3)
+# cropping PopRasterworld2 to Upstate NY
+Pop_Rasterworld4 <- crop(Pop_Rasterworld3, NYS_Counties2, mask = TRUE)
 ```
 
-Add any additional processing steps here.
+
+Transforms the coordinate system of the raster and crops it to the remaining NYS_counties that were not eliminated. The final line plots the population raster.
+
+```{r}
+plot(Pop_Rasterworld4)
+```
+
+# Part 1b: Loading in the NYS shapefiles and transforming coordinate systems
+
+```{r}
+NYS_Parks <- st_read("NYS_Park_Polygon.shp")
+NYS_DEC <- st_read("NYS_DEC_Lands.shp")
+NYS_Parks2 <- st_transform(NYS_Parks, "EPSG:4269")
+NYS_DEC2 <- st_transform(NYS_DEC, "EPSG:4269")
+```
+Completes the task. 
+
+# Part 2: Figuring out the number of NYS parks and DEC lands within a specified distance (82.5 miles) of each pixel and applying it to the raster cell. 
+
+```{r}
+Pop_cells <- 1:ncell(Pop_Rasterworld4)
+Pop_coords <- xyFromCell(Pop_Rasterworld4, Pop_cells) |> as.data.frame() |> mutate(ID = Pop_cells)
+str(Pop_coords)
+Pop_coords3 <- st_as_sf(Pop_coords, coords = c("x", "y"), crs = st_crs(target_crs))
+```
+
+Code gets the coordinates of the middle of each raster cell, along with an ID number and saves it as a an sf object. 
+
+```{r}
+Pop_coords4 <- vect(Pop_coords3)
+Pop_coords5 <- terra::buffer(Pop_coords4, width = 132770.88)
+```
+Applies a buffer, the width determines the range away from each point it will look for parks! (in meters) 
+
+The current range is 132770.88 meters or 82.5 miles which is the distance you could drive if you drove in a straight line at 55mph in 90 minutes (1.5 hours). 
+Chosen due to the country speed limit being 55mph and averaging out from potential interstate portions (~70mph) and country side parts that might be slower. 
+
+This number will very likely be modified to a lower amount (due to terrain and movement constraints) and a function created to make smaller circles for areas of higher population (to simulate traffic or speed constraints).
+
+# Part 2a: Figuring out number of NYS Parks within each range...
+
+WARNING: THIS WILL TAKE MULTIPLE MINUTES OR MAY NOT WORK ENTIRELY, THIS IS A LARGE PERFORMANCE. 
+```{r}
+NYS_Parks3 <- vect(NYS_Parks2)
+Relate <- relate(Pop_coords5, NYS_Parks3, pairs = TRUE, relation = "intersects", na.rm = FALSE)
+```
+This code preforms a relate finding all of the pairs (x -> park1, x->park2, etc..) between a pixel and parks in range and outputs the result to a matrix. 
+
+```{r}
+Relate2 <- as.data.frame(Relate)
+Relate3 <- Relate2 |> group_by(id.x) |> summarise(number_of_parks = n_distinct(id.y))
+```
+Groups the matrix by cell id and condenses each group by finding the number of distinct Y values are in each group (the number of parks tied to each cell).
+
+This gives the number of parks within range of each cell! 
+
+```{r}
+N_NYS_Parks <- bind_cols(Pop_coords3, Relate3)
+```
+Binding the number of parks within range to the coordinates of each respective cell for rasterization. 
+
+```{r}
+NYS_Raster <- rasterize(N_NYS_Parks3, Pop_Rasterworld4, field = numeric, values = N_NYS_Parks$number_of_parks)
+NYS_Raster2 <- mask(NYS_Raster, Pop_Rasterworld4)
+```
+Rasterizes the point features into a raster layer using the specifications of the population raster, assigning each point to a pixel. 
+
+```{r}
+Pop_Rasterworld6 <- c(Pop_Rasterworld4, NYS_Raster2)
+```
+
+Combines the number of parks raster layer with the population raster layer to make one raster with 2 layers! 
+
+This raster is currently broken and I am still trying to find the cause of the circles...
+
+```{r}
+plot(NYS_Raster2)
+```
+
+# Part 2b: Figuring out number of NYS DEC lands in range...
+
+To be continued....
+
+
+
+
+
+
+
+
+
+
+
+
 
 # Results
 

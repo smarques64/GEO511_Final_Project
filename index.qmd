@@ -18,7 +18,7 @@ However, what is not known is the exact degree of access different population ce
 
 3: Where does most of upstate NY fall on a distribution of population and number of parks and DEC lands within range? (does the vast majority of the state have lesser access then most rural areas or somewhere in the middle?)
 
-## Data Download
+## Data Links (will be downloaded automatically with code)
 
 # Spatial data of NYS Park Owned Lands: 
 Download shapefile 
@@ -42,6 +42,7 @@ Tigris County Subdivision + US State Shapefiles will be downloaded in code.
 
 # Part 0: Loading necessary libraries
 ```{r}
+#|message: false
 install.packages("tidyterra")
 install.packages("tigris")
 install.packages("tidyverse")
@@ -61,7 +62,9 @@ library(httr)
 library(jsonlite)
 ```
 
-# Part 1a: Creating Population Density Raster within defined Upstate NY Area 
+# Part 1a: Creating Population Density Raster within defined Upstate NY Area
+
+I am still figuring out how to automatically download the population data from Earthdata with a package so I disabled the population raster code for now. 
 
 ```{r}
 #Pop_RasterWorld <- rast("gpw_v4_population_count_rev11_2020_30_sec.tif")

@@ -2,22 +2,25 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.38">
+<meta name="generator" content="quarto-1.11.9">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Your name here">
-<meta name="dcterms.date" content="2026-10-26">
+<meta name="author" content="Samuel Marques">
+<meta name="dcterms.date" content="2026-11-13">
 
 <title>Upstate NY Parks Project – GEO511_FinalProject</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -72,14 +75,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta name="quarto:offset" content="./">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-a0f9fd0d421825b736dc1bbcbcba2219.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-8d3ad9c781c51ccd60b292c95058b2c2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -107,61 +111,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
-<script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
-
-<link href="site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
-
-<link href="site_libs/htmltools-fill-0.5.9/fill.css" rel="stylesheet">
-
-<script src="site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
-
-<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-
-<link href="site_libs/leaflet-1.3.1/leaflet.css" rel="stylesheet">
-
-<script src="site_libs/leaflet-1.3.1/leaflet.js"></script>
-
-<link href="site_libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet">
-
-<script src="site_libs/proj4-2.6.2/proj4.min.js"></script>
-
-<script src="site_libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
-
-<link href="site_libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet">
-
-<script src="site_libs/leaflet-binding-2.2.3/leaflet.js"></script>
-
-<link href="site_libs/dygraphs-1.1.1/dygraph.css" rel="stylesheet">
-
-<script src="site_libs/dygraphs-1.1.1/dygraph-combined.js"></script>
-
-<script src="site_libs/dygraphs-1.1.1/shapes.js"></script>
-
-<script src="site_libs/moment-2.8.4/moment.js"></script>
-
-<script src="site_libs/moment-timezone-0.2.5/moment-timezone-with-data.js"></script>
-
-<script src="site_libs/moment-fquarter-1.0.0/moment-fquarter.min.js"></script>
-
-<script src="site_libs/dygraphs-binding-1.1.1.6/dygraphs.js"></script>
-
 
 
 </head>
 
-<body class="nav-fixed fullcontent quarto-light">
+<body class="nav-fixed fullcontent quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a>
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark" aria-label="Site">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">GEO511_FinalProject</span>
     </a>
   </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -172,12 +137,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./about.html"> 
-<span class="menu-text">About</span></a>
+<span class="menu-text">about.html</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
 </div>
+            <div id="quarto-search" class="" title="Search"></div>
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -187,12 +153,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content" id="quarto-document-content" tabindex="-1">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">Upstate NY Parks Project</h1>
-<p class="subtitle lead">Subtitle here if desired</p>
+<p class="subtitle lead">Analyzing the distribution of population and access to Upstate NY State Parks and state owned environmental lands</p>
 </div>
 
 
@@ -202,14 +168,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Your name here </p>
+             <p>Samuel Marques </p>
           </div>
   </div>
     
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">October 26, 2026</p>
+      <p class="date">November 13, 2026</p>
     </div>
   </div>
   
@@ -221,200 +187,403 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="introduction" class="level1">
-<h1>Introduction</h1>
-<p>[~ 200 words]</p>
-<p>Clearly stated background and questions / hypotheses / problems being addressed. Sets up the analysis in an interesting and compelling way. Include figures if you like.</p>
-</section>
-<section id="materials-and-methods" class="level1">
-<h1>Materials and methods</h1>
-<p>[~ 200 words]</p>
-<p>Narrative: Clear narrative description of the data sources and methods. Includes data from at least two sources that were integrated / merged in R.</p>
-<p>Code: The code associated with the project is well organized and easy to follow. Demonstrates mastery of R graphics and functions.</p>
-<p>Data: The underlying data are publicly accessible via the web and downloaded/accessed within the Rmd script. If you want to use your own data, you must make it available on a website (e.g.&nbsp;Figshare) so that others are able to re-run your code.</p>
-<p>You can do bullets like this:</p>
-<ul>
-<li>The first most important thing</li>
-<li>The second most important thing</li>
-<li>The third most important thing</li>
-</ul>
-<p>You can do numbers like this:</p>
-<ol type="1">
-<li>The first most important thing</li>
-<li>The second most important thing</li>
-<li>The third most important thing</li>
-</ol>
-<p>See <a href="http://rmarkdown.rstudio.com/" class="uri">http://rmarkdown.rstudio.com/</a> for all the amazing things you can do.</p>
-<p>Here’s my first code chunk.</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>x<span class="ot">=</span><span class="dv">3</span><span class="sc">+</span><span class="dv">4</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<p>Refer to output in your narrative like this: x=7 .</p>
-<p>Load any required packages in a code chunk (you may need to install some packages):</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(leaflet)</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(kableExtra)</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(htmlwidgets)</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(widgetframe)</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span>opts_chunk<span class="sc">$</span><span class="fu">set</span>(<span class="at">widgetframe_widgets_dir =</span> <span class="st">'widgets'</span> ) </span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span>opts_chunk<span class="sc">$</span><span class="fu">set</span>(<span class="at">cache=</span><span class="cn">TRUE</span>)  <span class="co"># cache the results for quick compiling</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<section id="download-and-clean-all-required-data" class="level2">
-<h2 class="anchored" data-anchor-id="download-and-clean-all-required-data">Download and clean all required data</h2>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>n<span class="ot">=</span><span class="dv">20</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>data<span class="ot">=</span><span class="fu">data.frame</span>(<span class="at">x=</span><span class="fu">runif</span>(n,<span class="sc">-</span><span class="dv">180</span>,<span class="dv">180</span>),</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>                <span class="at">y=</span><span class="fu">runif</span>(n,<span class="sc">-</span><span class="dv">60</span>,<span class="dv">60</span>),</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>                <span class="at">size =</span> <span class="fu">runif</span>(n, <span class="dv">5</span>, <span class="dv">20</span>),</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>                <span class="at">category =</span> <span class="fu">factor</span>(</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>                  <span class="fu">sample</span>(letters[<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>], n, <span class="at">replace =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>                  ),</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>                <span class="at">value =</span> <span class="fu">rnorm</span>(n))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>data <span class="sc">%&gt;%</span> </span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>) <span class="sc">%&gt;%</span> <span class="co">#show only 1:n rows</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable</span>(<span class="at">digits=</span><span class="dv">2</span>,<span class="at">align=</span><span class="st">"c"</span>)<span class="sc">%&gt;%</span> <span class="co">#make table and round to two digits</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable_styling</span>(<span class="at">bootstrap_options =</span> </span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>                  <span class="fu">c</span>(<span class="st">"striped"</span>, <span class="st">"hover"</span>, <span class="st">"condensed"</span>, <span class="st">"responsive"</span>)) <span class="co">#apply other formatting</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="table-responsive">
-<table class="table table-striped table-hover table-condensed caption-top">
-<thead>
-<tr class="header">
-<th style="text-align: center;" data-quarto-table-cell-role="th">x</th>
-<th style="text-align: center;" data-quarto-table-cell-role="th">y</th>
-<th style="text-align: center;" data-quarto-table-cell-role="th">size</th>
-<th style="text-align: center;" data-quarto-table-cell-role="th">category</th>
-<th style="text-align: center;" data-quarto-table-cell-role="th">value</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">25.23</td>
-<td style="text-align: center;">28.75</td>
-<td style="text-align: center;">7.38</td>
-<td style="text-align: center;">d</td>
-<td style="text-align: center;">-1.64</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">-80.44</td>
-<td style="text-align: center;">29.83</td>
-<td style="text-align: center;">10.60</td>
-<td style="text-align: center;">c</td>
-<td style="text-align: center;">0.61</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">89.10</td>
-<td style="text-align: center;">45.74</td>
-<td style="text-align: center;">10.38</td>
-<td style="text-align: center;">c</td>
-<td style="text-align: center;">-0.43</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">91.22</td>
-<td style="text-align: center;">6.51</td>
-<td style="text-align: center;">15.10</td>
-<td style="text-align: center;">c</td>
-<td style="text-align: center;">1.14</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">-85.72</td>
-<td style="text-align: center;">17.22</td>
-<td style="text-align: center;">5.84</td>
-<td style="text-align: center;">a</td>
-<td style="text-align: center;">-0.01</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">128.31</td>
-<td style="text-align: center;">4.54</td>
-<td style="text-align: center;">13.86</td>
-<td style="text-align: center;">c</td>
-<td style="text-align: center;">-1.99</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">89.03</td>
-<td style="text-align: center;">-6.17</td>
-<td style="text-align: center;">13.32</td>
-<td style="text-align: center;">c</td>
-<td style="text-align: center;">-1.84</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">90.40</td>
-<td style="text-align: center;">-4.49</td>
-<td style="text-align: center;">5.27</td>
-<td style="text-align: center;">e</td>
-<td style="text-align: center;">1.06</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">-165.80</td>
-<td style="text-align: center;">-4.03</td>
-<td style="text-align: center;">16.52</td>
-<td style="text-align: center;">d</td>
-<td style="text-align: center;">-1.20</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">70.11</td>
-<td style="text-align: center;">-44.48</td>
-<td style="text-align: center;">10.14</td>
-<td style="text-align: center;">e</td>
-<td style="text-align: center;">2.22</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>Add any additional processing steps here.</p>
+<section id="introduction-reasoning" class="level1">
+<h1>Introduction &amp; Reasoning</h1>
+<p>New York State (NYS) has the largest number of state parks (not area) of any state in the United States. Along with this there are numerous environmental lands owned by the NYS Department of Environmental Conservation (NYS DEC) including State Forests, Wildlife Management Areas and all environmental land in the Adirondack and Catskill parks. Despite New Yorkers across the state paying for this land, there are obvious spatial discrepancies giving easier access to people living in certain areas of the state, allowing them more options for a day trip to hike or partake in other recreational activities.</p>
+<p>However, what is not known is the exact degree of access different population centers have to these lands. For example, does Rochester or Buffalo have easier access? Or where does most of the Upstate NY population fall in terms of access? Through this research I plan to answer the following questions:</p>
+<p>1: Which large population clusters have the greatest day-access to NYS Parks or NYS DEC lands or both?</p>
+<p>2: What is the general range of access across these population clusters? (do the southeast suburbs or the northwest suburbs of Rochester get better access?)</p>
+<p>3: Where does most of upstate NY fall on a distribution of population and number of parks and DEC lands within range? (does the vast majority of the state have lesser access then most rural areas or somewhere in the middle?)</p>
+<section id="data-download" class="level2">
+<h2 class="anchored" data-anchor-id="data-download">Data Download</h2>
 </section>
 </section>
-<section id="results" class="level1">
-<h1>Results</h1>
-<p>[~200 words]</p>
-<p>Tables and figures (maps and other graphics) are carefully planned to convey the results of your analysis. Intense exploration and evidence of many trials and failures. The author looked at the data in many different ways before coming to the final presentation of the data.</p>
-<p>Show tables, plots, etc. and describe them.</p>
+<section id="spatial-data-of-nys-park-owned-lands" class="level1">
+<h1>Spatial data of NYS Park Owned Lands:</h1>
+<p>Download shapefile</p>
+<p>Link: https://data.gis.ny.gov/datasets/17994e0b601e40ab8d52504971304d36/explore?location=42.772750%2C-75.716874%2C6</p>
+</section>
+<section id="spatial-data-of-nys-dec-owned-lands" class="level1">
+<h1>Spatial data of NYS DEC Owned Lands:</h1>
+<p>Download shapefile</p>
+<p>Link: https://data.gis.ny.gov/datasets/84b4cce8a8974c31a1c5584540f3aaae/explore?location=45.849978%2C-76.858538%2C7</p>
+</section>
+<section id="population-raster" class="level1">
+<h1>Population Raster:</h1>
+<p>Download raster</p>
+<p>Link: https://search.earthdata.nasa.gov/search/granules?p=C3540918004-ESDIS&amp;pg[0][v]=f&amp;pg[0][gsk]=-start_date&amp;g=G3553496284-ESDIS&amp;long=3.5942492012779557&amp;zoom=2.290018846932618</p>
+</section>
+<section id="other" class="level1">
+<h1>Other:</h1>
+<p>Tigris County Subdivision + US State Shapefiles will be downloaded in code.</p>
+<section id="methods" class="level2">
+<h2 class="anchored" data-anchor-id="methods">Methods:</h2>
+</section>
+</section>
+<section id="part-0-loading-necessary-libraries" class="level1">
+<h1>Part 0: Loading necessary libraries</h1>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>m <span class="ot">&lt;-</span> <span class="fu">leaflet</span>(data) <span class="sc">%&gt;%</span> </span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addTiles</span>() <span class="sc">%&gt;%</span> </span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addCircleMarkers</span>(<span class="sc">~</span>x, <span class="sc">~</span>y, <span class="at">radius =</span> <span class="sc">~</span>size,<span class="at">color =</span> <span class="sc">~</span><span class="fu">as.factor</span>(category)) <span class="sc">%&gt;%</span> </span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addPopups</span>(<span class="sc">~</span>x[<span class="dv">2</span>], <span class="sc">~</span>y[<span class="dv">2</span>], <span class="st">"Random popup"</span>)</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>m  <span class="co"># a map with the default OSM tile layer</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output-display">
-<div class="leaflet html-widget html-fill-item" id="htmlwidget-9eae1b06e91cbff5f68b" style="width:100%;height:325px;"></div>
-<script type="application/json" data-for="htmlwidget-9eae1b06e91cbff5f68b">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org/copyright/\">OpenStreetMap<\/a>,  <a href=\"https://opendatacommons.org/licenses/odbl/\">ODbL<\/a>"}]},{"method":"addCircleMarkers","args":[[28.75024292618036,29.82753971591592,45.73518119752407,6.512091681361198,17.22291268408298,4.537666467949748,-6.169457528740168,-4.491651942953467,-4.031531950458884,-44.47969260625541,35.58954980224371,41.04372974485159,-20.48804218880832,0.9585004672408104,22.03324634581804,49.24844521097839,-59.11385469138622,56.25549101270735,23.29090640880167,15.52340302616358],[25.22688154131174,-80.43842140585184,89.09520003944635,91.21864247135818,-85.71930295787752,128.3050060551614,89.03441146016121,90.39848120883107,-165.7981418073177,70.10974729433656,69.68029537238181,-99.83563103713095,-124.1262544970959,-134.3304573465139,-122.8621095232666,-157.1932358387858,-3.143014535307884,-144.3544372916222,57.75406857021153,148.7622076738626],[7.382361030904576,10.59609612450004,10.37766162189655,15.1015960960649,5.83721622126177,13.86390413972549,13.32007680437528,5.270255535142496,16.51778757106513,10.14421234023757,11.79109643562697,18.89520565397106,7.933896112954244,19.95697110891342,11.48550689336844,16.90814821398817,6.705716045107692,11.61308387410827,17.86755139473826,18.92739662551321],null,null,{"interactive":true,"className":"","stroke":true,"color":["d","c","c","c","a","c","c","e","d","e","c","a","e","b","a","b","c","a","e","b"],"weight":5,"opacity":0.5,"fill":true,"fillColor":["d","c","c","c","a","c","c","e","d","e","c","a","e","b","a","b","c","a","e","b"],"fillOpacity":0.2},null,null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addPopups","args":[29.82753971591592,-80.43842140585184,"Random popup",null,null,{"maxWidth":300,"minWidth":50,"autoPan":true,"keepInView":false,"closeButton":true,"className":""}]}],"limits":{"lat":[-59.11385469138622,56.25549101270735],"lng":[-165.7981418073177,148.7622076738626]}},"evals":[],"jsHooks":[]}</script>
-<p>Map of completely random data</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"tidyterra"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>The following package(s) will be installed:
+- tidyterra [1.3.1]
+These packages will be installed into "~/work/GEO511_Final_Project/GEO511_Final_Project/renv/library/linux-ubuntu-resolute/R-4.6/x86_64-pc-linux-gnu".
+
+# Downloading packages -------------------------------------------------------
+[32m✔[0m tidyterra 1.3.1                          [2.2 MB in 0.38s]
+Successfully downloaded 1 package in 0.55 seconds.
+
+# Installing packages --------------------------------------------------------
+[32m✔[0m tidyterra 1.3.1                          [installed binary]
+Successfully installed 1 package in 2.9 seconds.</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"tigris"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>The following package(s) will be installed:
+- httr2  [1.3.0]
+- tigris [2.3.0]
+- zip    [3.0.2]
+These packages will be installed into "~/work/GEO511_Final_Project/GEO511_Final_Project/renv/library/linux-ubuntu-resolute/R-4.6/x86_64-pc-linux-gnu".
+
+# Downloading packages -------------------------------------------------------
+[32m✔[0m tigris 2.3.0                             [418 kB in 0.19s]
+[32m✔[0m httr2 1.3.0                              [989 kB in 0.2s]
+[32m✔[0m zip 3.0.2                                [992 kB in 0.21s]
+Successfully downloaded 3 packages in 0.37 seconds.
+
+# Installing packages --------------------------------------------------------
+[32m✔[0m httr2 1.3.0                              [installed binary]
+[32m✔[0m zip 3.0.2                                [installed binary]
+[32m✔[0m tigris 2.3.0                             [installed binary]
+Successfully installed 3 packages in 1.2 seconds.</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>The following package(s) will be installed:
+- gargle    [1.7.0]
+- tidyverse [2.0.0]
+These packages will be installed into "~/work/GEO511_Final_Project/GEO511_Final_Project/renv/library/linux-ubuntu-resolute/R-4.6/x86_64-pc-linux-gnu".
+
+# Downloading packages -------------------------------------------------------
+[32m✔[0m gargle 1.7.0                             [798 kB in 0.23s]
+Successfully downloaded 1 package in 0.38 seconds.
+
+# Installing packages --------------------------------------------------------
+[32m✔[0m tidyverse 2.0.0                          [linked from cache]
+[32m✔[0m gargle 1.7.0                             [installed binary]
+Successfully installed 2 packages in 0.29 seconds.</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"elevatr"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>The following package(s) will be installed:
+- elevatr    [0.99.1]
+- furrr      [0.4.0]
+- future     [1.82.0]
+- globals    [0.20.0]
+- listenv    [1.1.0]
+- parallelly [1.50.0]
+- progressr  [1.1.0]
+- slippymath [0.3.1]
+These packages will be installed into "~/work/GEO511_Final_Project/GEO511_Final_Project/renv/library/linux-ubuntu-resolute/R-4.6/x86_64-pc-linux-gnu".
+
+# Downloading packages -------------------------------------------------------
+[32m✔[0m listenv 1.1.0                            [138 kB in 0.17s]
+[32m✔[0m parallelly 1.50.0                        [692 kB in 0.17s]
+[32m✔[0m progressr 1.1.0                          [587 kB in 0.17s]
+[32m✔[0m furrr 0.4.0                              [1.0 MB in 0.17s]
+[32m✔[0m elevatr 0.99.1                           [353 kB in 0.17s]
+[32m✔[0m future 1.82.0                            [1.1 MB in 0.17s]
+[32m✔[0m slippymath 0.3.1                         [2.3 MB in 0.18s]
+[32m✔[0m globals 0.20.0                           [177 kB in 0.23s]
+Successfully downloaded 8 packages in 0.39 seconds.
+
+# Installing packages --------------------------------------------------------
+[32m✔[0m globals 0.20.0                           [installed binary]
+[32m✔[0m listenv 1.1.0                            [installed binary]
+[32m✔[0m parallelly 1.50.0                        [installed binary]
+[32m✔[0m progressr 1.1.0                          [installed binary]
+[32m✔[0m slippymath 0.3.1                         [installed binary]
+[32m✔[0m future 1.82.0                            [installed binary]
+[32m✔[0m furrr 0.4.0                              [installed binary]
+[32m✔[0m elevatr 0.99.1                           [installed binary]
+Successfully installed 8 packages in 1.8 seconds.</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"osrm"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>The following package(s) will be installed:
+- googlePolylines [0.8.7]
+- mapiso          [0.3.0]
+- osrm            [6.0.0]
+- RcppSimdJson    [0.1.17]
+These packages will be installed into "~/work/GEO511_Final_Project/GEO511_Final_Project/renv/library/linux-ubuntu-resolute/R-4.6/x86_64-pc-linux-gnu".
+
+# Downloading packages -------------------------------------------------------
+[32m✔[0m RcppSimdJson 0.1.17                      [4.4 MB in 0.27s]
+[32m✔[0m osrm 6.0.0                               [526 kB in 0.35s]
+[32m✔[0m googlePolylines 0.8.7                    [4.7 MB in 0.36s]
+[32m✔[0m mapiso 0.3.0                             [829 kB in 0.36s]
+Successfully downloaded 4 packages in 0.52 seconds.
+
+# Installing packages --------------------------------------------------------
+[32m✔[0m googlePolylines 0.8.7                    [installed binary]
+[32m✔[0m mapiso 0.3.0                             [installed binary]
+[32m✔[0m RcppSimdJson 0.1.17                      [installed binary]
+[32m✔[0m osrm 6.0.0                               [installed binary]
+Successfully installed 4 packages in 1.9 seconds.</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"r5r"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>The following package(s) will be installed:
+- checkmate  [2.3.4]
+- geometries [0.2.5]
+- r5r        [2.5.0]
+- rJava      [1.0-18]
+- sfheaders  [0.4.5]
+These packages will be installed into "~/work/GEO511_Final_Project/GEO511_Final_Project/renv/library/linux-ubuntu-resolute/R-4.6/x86_64-pc-linux-gnu".
+
+# Downloading packages -------------------------------------------------------
+[32m✔[0m geometries 0.2.5                         [311 kB in 0.14s]
+[32m✔[0m checkmate 2.3.4                          [771 kB in 0.16s]
+[32m✔[0m sfheaders 0.4.5                          [519 kB in 0.21s]
+[32m✔[0m rJava 1.0-18                             [952 kB in 0.28s]
+[32m✔[0m r5r 2.5.0                                [3.8 MB in 0.39s]
+Successfully downloaded 5 packages in 0.55 seconds.
+
+# Installing packages --------------------------------------------------------
+[32m✔[0m checkmate 2.3.4                          [installed binary]
+[32m✔[0m geometries 0.2.5                         [installed binary]
+[32m✔[0m rJava 1.0-18                             [installed binary]
+[32m✔[0m sfheaders 0.4.5                          [installed binary]
+[32m✔[0m r5r 2.5.0                                [installed binary]
+Successfully installed 5 packages in 1.7 seconds.</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"knitr"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>The following package(s) will be installed:
+- knitr [1.52]
+These packages will be installed into "~/work/GEO511_Final_Project/GEO511_Final_Project/renv/library/linux-ubuntu-resolute/R-4.6/x86_64-pc-linux-gnu".
+
+# Installing packages --------------------------------------------------------
+[32m✔[0m knitr 1.52                               [linked from cache]
+Successfully installed 1 package in 2.3 milliseconds.</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tigris)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>To enable caching of data, set `options(tigris_use_cache = TRUE)`
+in your R script or .Rprofile.</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(terra)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>terra 1.9.50</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Attaching package: 'terra'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following object is masked from 'package:tigris':
+
+    blocks</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tibble)</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.2.1     ✔ purrr     1.2.2
+✔ forcats   1.0.1     ✔ readr     2.2.0
+✔ ggplot2   4.0.3     ✔ stringr   1.6.0
+✔ lubridate 1.9.5     ✔ tidyr     1.3.2</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ tidyr::extract() masks terra::extract()
+✖ dplyr::filter()  masks stats::filter()
+✖ dplyr::lag()     masks stats::lag()
+ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Linking to GEOS 3.14.1, GDAL 3.12.2, PROJ 9.7.1; sf_use_s2() is TRUE</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(osrm)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Data: (c) OpenStreetMap contributors, ODbL 1.0 - https://www.openstreetmap.org/copyright
+Routing: OSRM - https://project-osrm.org/</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(httr)</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(jsonlite)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Attaching package: 'jsonlite'
+
+The following object is masked from 'package:purrr':
+
+    flatten</code></pre>
 </div>
 </div>
+</section>
+<section id="part-1a-creating-population-density-raster-within-defined-upstate-ny-area" class="level1">
+<h1>Part 1a: Creating Population Density Raster within defined Upstate NY Area</h1>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>data <span class="sc">%&gt;%</span> </span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>x,<span class="at">y=</span>y,<span class="at">col=</span>category))<span class="sc">+</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Pop_RasterWorld &lt;- rast("gpw_v4_population_count_rev11_2020_30_sec.tif")</span></span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>NYS_Counties <span class="ot">&lt;-</span> tigris<span class="sc">::</span><span class="fu">county_subdivisions</span>(<span class="at">state =</span> <span class="st">"NY"</span>, <span class="at">cb =</span> <span class="cn">TRUE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Retrieving data for the year 2025</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>United_States <span class="ot">&lt;-</span> tigris<span class="sc">::</span><span class="fu">states</span>(<span class="at">cb =</span> <span class="cn">TRUE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Retrieving data for the year 2025</code></pre>
+</div>
+</div>
+<p>This gets the population raster along with plots of NYS County Subdivisions + US States from Tigris. The latter two shapefiles will be used to crop the raster to our desired upstate region.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>NYS_Counties2 <span class="ot">&lt;-</span> NYS_Counties <span class="sc">|&gt;</span></span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter_out</span>(NAMELSADCO <span class="sc">==</span> <span class="st">"Suffolk County"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter_out</span>(NAMELSADCO <span class="sc">==</span> <span class="st">"Nassau County"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter_out</span>(NAMELSADCO <span class="sc">==</span> <span class="st">"Queens County"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter_out</span>(NAMELSADCO <span class="sc">==</span> <span class="st">"Kings County"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter_out</span>(NAMELSADCO <span class="sc">==</span> <span class="st">"New York County"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb34-7"><a href="#cb34-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter_out</span>(NAMELSADCO <span class="sc">==</span> <span class="st">"Richmond County"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb34-8"><a href="#cb34-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter_out</span>(NAMELSADCO <span class="sc">==</span> <span class="st">"Bronx County"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb34-9"><a href="#cb34-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter_out</span>(NAMELSADCO <span class="sc">==</span> <span class="st">"Westchester County"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb34-10"><a href="#cb34-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter_out</span>(NAMELSADCO <span class="sc">==</span> <span class="st">"Rockland County"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Excluding counties that are classified as “Downstate” for this project.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>United_States_Keep <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"NY"</span>, <span class="st">"PA"</span>, <span class="st">"NJ"</span>, <span class="st">"VT"</span>, <span class="st">"CT"</span>, <span class="st">"MA"</span>)</span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>United_States2 <span class="ot">&lt;-</span> United_States <span class="sc">|&gt;</span> <span class="fu">filter</span>(STUSPS <span class="sc">%in%</span> United_States_Keep)</span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a><span class="co"># creates united states to clip raster to with just the 6 bordering states.</span></span>
+<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a><span class="co">#view(United_States2)</span></span>
+<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a><span class="co">#Pop_Rasterworld2 &lt;- crop(Pop_RasterWorld, United_States2, mask = TRUE)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Cropping the raster to nearby states, a warning message will be received that they do not have the same coordinate system, this is true. This first crop is done to speed up projection to match the raster coordinate system to a common system that is already used by the Tigris files.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="co">#target_crs &lt;- "EPSG:4269"</span></span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a><span class="co">#Pop_Rasterworld3 &lt;- project(Pop_Rasterworld2, target_crs, method = "bilinear")</span></span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a><span class="co">#st_crs(Pop_Rasterworld3)</span></span>
+<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a><span class="co"># cropping PopRasterworld2 to Upstate NY</span></span>
+<span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a><span class="co">#Pop_Rasterworld4 &lt;- crop(Pop_Rasterworld3, NYS_Counties2, mask = TRUE)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Transforms the coordinate system of the raster and crops it to the remaining NYS_counties that were not eliminated. The final line plots the population raster.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="co">#plot(Pop_Rasterworld4)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="part-1b-loading-in-the-nys-shapefiles-and-transforming-coordinate-systems" class="level1">
+<h1>Part 1b: Loading in the NYS shapefiles and transforming coordinate systems</h1>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ==== API CALL =====</span></span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>Parks_url <span class="ot">&lt;-</span> <span class="st">"https://services.arcgis.com/1xFZPtKn1wKC6POA/arcgis/rest/services/NY_State_Park_Properties/FeatureServer/0/query?outFields=*&amp;where=1%3D1&amp;f=geojson"</span></span>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a>DEC_url <span class="ot">&lt;-</span> <span class="st">"https://services6.arcgis.com/DZHaqZm9cxOD4CWM/arcgis/rest/services/NYS_DEC_Lands/FeatureServer/0/query?outFields=*&amp;where=1%3D1&amp;f=geojson"</span></span>
+<span id="cb38-5"><a href="#cb38-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-6"><a href="#cb38-6" aria-hidden="true" tabindex="-1"></a>NYS_Parks <span class="ot">&lt;-</span> <span class="fu">st_read</span>(<span class="at">dsn =</span> Parks_url)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Reading layer `OGRGeoJSON' from data source 
+  `https://services.arcgis.com/1xFZPtKn1wKC6POA/arcgis/rest/services/NY_State_Park_Properties/FeatureServer/0/query?outFields=*&amp;where=1%3D1&amp;f=geojson' 
+  using driver `GeoJSON'
+Simple feature collection with 291 features and 25 fields
+Geometry type: MULTIPOLYGON
+Dimension:     XY
+Bounding box:  xmin: -79.59648 ymin: 40.53249 xmax: -71.83727 ymax: 45.01301
+Geodetic CRS:  WGS 84</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>NYS_DEC <span class="ot">&lt;-</span> <span class="fu">st_read</span>(<span class="at">dsn =</span> DEC_url)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Reading layer `OGRGeoJSON' from data source 
+  `https://services6.arcgis.com/DZHaqZm9cxOD4CWM/arcgis/rest/services/NYS_DEC_Lands/FeatureServer/0/query?outFields=*&amp;where=1%3D1&amp;f=geojson' 
+  using driver `GeoJSON'
+Simple feature collection with 3238 features and 14 fields
+Geometry type: MULTIPOLYGON
+Dimension:     XY
+Bounding box:  xmin: -79.73413 ymin: 40.50059 xmax: -72.03408 ymax: 45.00314
+Geodetic CRS:  WGS 84</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>NYS_Parks2 <span class="ot">&lt;-</span> <span class="fu">st_transform</span>(NYS_Parks, <span class="st">"EPSG:4269"</span>)</span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>NYS_DEC2 <span class="ot">&lt;-</span> <span class="fu">st_transform</span>(NYS_DEC, <span class="st">"EPSG:4269"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Completes the task.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(NYS_Parks2)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: plotting the first 9 out of 25 attributes; use max.plot = 25 to plot
+all</code></pre>
+</div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(NYS_DEC2)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: plotting the first 9 out of 14 attributes; use max.plot = 14 to plot
+all</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-8-2.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
-<section id="dygraphs-example" class="level3">
-<h3 class="anchored" data-anchor-id="dygraphs-example">Dygraphs Example</h3>
+</section>
+<section id="part-2-figuring-out-the-number-of-nys-parks-and-dec-lands-within-a-specified-distance-82.5-miles-of-each-pixel-and-applying-it-to-the-raster-cell." class="level1">
+<h1>Part 2: Figuring out the number of NYS parks and DEC lands within a specified distance (82.5 miles) of each pixel and applying it to the raster cell.</h1>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dygraphs)</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">dygraph</span>(nhtemp, <span class="at">main =</span> <span class="st">"New Haven Temperatures"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">dyRangeSelector</span>(<span class="at">dateWindow =</span> <span class="fu">c</span>(<span class="st">"1920-01-01"</span>, <span class="st">"1960-01-01"</span>)) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output-display">
-<div class="dygraphs html-widget html-fill-item" id="htmlwidget-9eae1b06e91cbff5f68b" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-9eae1b06e91cbff5f68b">{"x":{"attrs":{"title":"New Haven Temperatures","labels":["year","V1"],"legend":"auto","retainDateWindow":false,"axes":{"x":{"pixelsPerLabel":60}},"showRangeSelector":true,"dateWindow":["1920-01-01T00:00:00.000Z","1960-01-01T00:00:00.000Z"],"rangeSelectorHeight":40,"rangeSelectorPlotFillColor":" #A7B1C4","rangeSelectorPlotStrokeColor":"#808FAB","interactionModel":"Dygraph.Interaction.defaultModel"},"scale":"yearly","annotations":[],"shadings":[],"events":[],"format":"date","data":[["1912-01-01T00:00:00.000Z","1913-01-01T00:00:00.000Z","1914-01-01T00:00:00.000Z","1915-01-01T00:00:00.000Z","1916-01-01T00:00:00.000Z","1917-01-01T00:00:00.000Z","1918-01-01T00:00:00.000Z","1919-01-01T00:00:00.000Z","1920-01-01T00:00:00.000Z","1921-01-01T00:00:00.000Z","1922-01-01T00:00:00.000Z","1923-01-01T00:00:00.000Z","1924-01-01T00:00:00.000Z","1925-01-01T00:00:00.000Z","1926-01-01T00:00:00.000Z","1927-01-01T00:00:00.000Z","1928-01-01T00:00:00.000Z","1929-01-01T00:00:00.000Z","1930-01-01T00:00:00.000Z","1931-01-01T00:00:00.000Z","1932-01-01T00:00:00.000Z","1933-01-01T00:00:00.000Z","1934-01-01T00:00:00.000Z","1935-01-01T00:00:00.000Z","1936-01-01T00:00:00.000Z","1937-01-01T00:00:00.000Z","1938-01-01T00:00:00.000Z","1939-01-01T00:00:00.000Z","1940-01-01T00:00:00.000Z","1941-01-01T00:00:00.000Z","1942-01-01T00:00:00.000Z","1943-01-01T00:00:00.000Z","1944-01-01T00:00:00.000Z","1945-01-01T00:00:00.000Z","1946-01-01T00:00:00.000Z","1947-01-01T00:00:00.000Z","1948-01-01T00:00:00.000Z","1949-01-01T00:00:00.000Z","1950-01-01T00:00:00.000Z","1951-01-01T00:00:00.000Z","1952-01-01T00:00:00.000Z","1953-01-01T00:00:00.000Z","1954-01-01T00:00:00.000Z","1955-01-01T00:00:00.000Z","1956-01-01T00:00:00.000Z","1957-01-01T00:00:00.000Z","1958-01-01T00:00:00.000Z","1959-01-01T00:00:00.000Z","1960-01-01T00:00:00.000Z","1961-01-01T00:00:00.000Z","1962-01-01T00:00:00.000Z","1963-01-01T00:00:00.000Z","1964-01-01T00:00:00.000Z","1965-01-01T00:00:00.000Z","1966-01-01T00:00:00.000Z","1967-01-01T00:00:00.000Z","1968-01-01T00:00:00.000Z","1969-01-01T00:00:00.000Z","1970-01-01T00:00:00.000Z","1971-01-01T00:00:00.000Z"],[49.9,52.3,49.4,51.1,49.4,47.9,49.8,50.9,49.3,51.9,50.8,49.6,49.3,50.6,48.4,50.7,50.9,50.6,51.5,52.8,51.8,51.1,49.8,50.2,50.4,51.6,51.8,50.9,48.8,51.7,51,50.6,51.7,51.5,52.1,51.3,51,54,51.4,52.7,53.1,54.6,52,52,50.9,52.6,50.2,52.6,51.6,51.9,50.5,50.9,51.7,51.4,51.7,50.8,51.9,51.8,51.9,53]]},"evals":["attrs.interactionModel"],"jsHooks":[]}</script>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Pop_cells &lt;- 1:ncell(Pop_Rasterworld4)</span></span>
+<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a><span class="co">#Pop_coords &lt;- xyFromCell(Pop_Rasterworld4, Pop_cells) |&gt; as.data.frame() |&gt; mutate(ID = Pop_cells)</span></span>
+<span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a><span class="co">#str(Pop_coords)</span></span>
+<span id="cb47-4"><a href="#cb47-4" aria-hidden="true" tabindex="-1"></a><span class="co">#Pop_coords3 &lt;- st_as_sf(Pop_coords, coords = c("x", "y"), crs = st_crs(target_crs))</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
+<p>Code gets the coordinates of the middle of each raster cell, along with an ID number and saves it as a an sf object.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Pop_coords4 &lt;- vect(Pop_coords3)</span></span>
+<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a><span class="co">#Pop_coords5 &lt;- terra::buffer(Pop_coords4, width = 132770.88)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Applies a buffer, the width determines the range away from each point it will look for parks! (in meters)</p>
+<p>The current range is 132770.88 meters or 82.5 miles which is the distance you could drive if you drove in a straight line at 55mph in 90 minutes (1.5 hours). Chosen due to the country speed limit being 55mph and averaging out from potential interstate portions (~70mph) and country side parts that might be slower.</p>
+<p>This number will very likely be modified to a lower amount (due to terrain and movement constraints) and a function created to make smaller circles for areas of higher population (to simulate traffic or speed constraints).</p>
+</section>
+<section id="part-2a-figuring-out-number-of-nys-parks-within-each-range" class="level1">
+<h1>Part 2a: Figuring out number of NYS Parks within each range…</h1>
+<p>WARNING: THIS WILL TAKE MULTIPLE MINUTES OR MAY NOT WORK ENTIRELY, THIS IS A LARGE PERFORMANCE.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb49"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="co">#NYS_Parks3 &lt;- vect(NYS_Parks2)</span></span>
+<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a><span class="co">#Relate &lt;- relate(Pop_coords5, NYS_Parks3, pairs = TRUE, relation = "intersects", na.rm = FALSE)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>This code preforms a relate finding all of the pairs (x -&gt; park1, x-&gt;park2, etc..) between a pixel and parks in range and outputs the result to a matrix.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb50"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Relate2 &lt;- as.data.frame(Relate)</span></span>
+<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a><span class="co">#Relate3 &lt;- Relate2 |&gt; group_by(id.x) |&gt; summarise(number_of_parks = n_distinct(id.y))</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Groups the matrix by cell id and condenses each group by finding the number of distinct Y values are in each group (the number of parks tied to each cell).</p>
+<p>This gives the number of parks within range of each cell!</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb51"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="co">#N_NYS_Parks &lt;- bind_cols(Pop_coords3, Relate3)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Binding the number of parks within range to the coordinates of each respective cell for rasterization.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb52"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="co">#NYS_Raster &lt;- rasterize(N_NYS_Parks3, Pop_Rasterworld4, field = numeric, values = N_NYS_Parks$number_of_parks)</span></span>
+<span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a><span class="co">#NYS_Raster2 &lt;- mask(NYS_Raster, Pop_Rasterworld4)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Rasterizes the point features into a raster layer using the specifications of the population raster, assigning each point to a pixel.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb53"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Pop_Rasterworld6 &lt;- c(Pop_Rasterworld4, NYS_Raster2)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Combines the number of parks raster layer with the population raster layer to make one raster with 2 layers!</p>
+<p>This raster is currently broken and I am still trying to find the cause of the circles…</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb54"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="co">#plot(NYS_Raster2)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-</section>
-<section id="conclusions" class="level1">
-<h1>Conclusions</h1>
-<p>[~200 words]</p>
-<p>Clear summary adequately describing the results and putting them in context. Discussion of further questions and ways to continue investigation.</p>
-</section>
-<section id="references" class="level1">
-<h1>References</h1>
-<p>All sources are cited in a consistent manner</p>
+<section id="part-2b-figuring-out-number-of-nys-dec-lands-in-range" class="level1">
+<h1>Part 2b: Figuring out number of NYS DEC lands in range…</h1>
+<p>To be continued….</p>
 
 
 </section>
@@ -498,7 +667,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
       // Inspect non-navigation links and adorn them if external
-     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      window.quartoDecorateExternalLinks = function (root) {
+     var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
       for (var i=0; i<links.length; i++) {
         const link = links[i];
         if (!isInternal(link.href)) {
@@ -507,8 +677,69 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
+          if (!link.classList.contains('no-external-icon')) {
+          }
         }
       }
+      };
+      window.quartoDecorateExternalLinks(window.document);
+    // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
+    // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
+    const hideOnEscAndFocusOut = {
+      name: 'hideOnEscAndFocusOut',
+      defaultValue: true,
+      fn(instance) {
+        const dismiss = () => {
+          // A show scheduled by the trigger delay would otherwise reopen it
+          instance.clearDelayTimeouts();
+          instance.hide();
+        };
+        const onKeyDown = (event) => {
+          if (event.key !== 'Escape') {
+            return;
+          }
+          // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
+          // except an open reveal.js slide menu, which Esc should close too.
+          // The menu handles keys only when its keyboard option is on.
+          const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
+            window.Reveal.getConfig().menu?.keyboard !== false;
+          if (!menuHandlesEsc) {
+            event.stopPropagation();
+          }
+          if (instance.popper.contains(window.document.activeElement)) {
+            // Disabled while refocusing so the focus trigger does not reopen it
+            instance.disable();
+            instance.reference.focus();
+            instance.enable();
+          }
+          dismiss();
+        };
+        const onFocusOut = (event) => {
+          const target = event.relatedTarget;
+          if (target && !instance.reference.contains(target) &&
+              !instance.popper.contains(target)) {
+            dismiss();
+          }
+        };
+        // On the trigger too: a click trigger (code-annotations: select) has no
+        // blur handling. Attached for the instance's lifetime so leaving the
+        // trigger also cancels a show still pending on the trigger delay.
+        instance.reference.addEventListener('focusout', onFocusOut);
+        return {
+          onShow() {
+            window.document.addEventListener('keydown', onKeyDown, true);
+            instance.popper.addEventListener('focusout', onFocusOut);
+          },
+          onHide() {
+            window.document.removeEventListener('keydown', onKeyDown, true);
+            instance.popper.removeEventListener('focusout', onFocusOut);
+          },
+          onDestroy() {
+            instance.reference.removeEventListener('focusout', onFocusOut);
+          },
+        };
+      },
+    };
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
       const config = {
         allowHTML: true,
@@ -522,6 +753,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         interactiveBorder: 10,
         theme: 'quarto',
         placement: 'bottom-start',
+        plugins: [hideOnEscAndFocusOut],
       };
       if (contentFn) {
         config.content = contentFn;
@@ -684,44 +916,54 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           const lineIds = lines.map((line) => {
             return targetCell + "-" + line;
           })
-          let top = null;
-          let height = null;
-          let parent = null;
+          // Each band is positioned against its own containing block, which is
+          // not the offsetParent of the lines, so place it from client rects.
+          const placeBand = (band, firstEl, lastEl, codeBlock) => {
+            const container = band.offsetParent;
+            if (container === null) {
+              return;
+            }
+            const containerRect = container.getBoundingClientRect();
+            // Reveal.js scales slides with a transform, so convert client
+            // pixels back to the CSS pixels of the container.
+            const scale = containerRect.height / container.offsetHeight || 1;
+            const firstRect = firstEl.getBoundingClientRect();
+            const lastRect = lastEl.getBoundingClientRect();
+            const top = (firstRect.top - containerRect.top) / scale - container.clientTop + container.scrollTop;
+            const height = (lastRect.bottom - firstRect.top) / scale;
+            band.style.top = top - 2 + "px";
+            band.style.height = height + 4 + "px";
+            if (codeBlock) {
+              // Without the copy button wrapper, the containing block is wider
+              // than the code block, so span the code block explicitly.
+              const blockRect = codeBlock.getBoundingClientRect();
+              band.style.left = (blockRect.left - containerRect.left) / scale - container.clientLeft + container.scrollLeft + "px";
+              band.style.width = blockRect.width / scale + "px";
+            }
+          };
           if (lineIds.length > 0) {
-              //compute the position of the single el (top and bottom and make a div)
-              const el = window.document.getElementById(lineIds[0]);
-              top = el.offsetTop;
-              height = el.offsetHeight;
-              parent = el.parentElement.parentElement;
-            if (lineIds.length > 1) {
-              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-              height = bottom - top;
+            const el = window.document.getElementById(lineIds[0]);
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const parent = el.parentElement.parentElement;
+            // cook up a div (if necessary) and position it
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
             }
-            if (top !== null && height !== null && parent !== null) {
-              // cook up a div (if necessary) and position it 
-              let div = window.document.getElementById("code-annotation-line-highlight");
-              if (div === null) {
-                div = window.document.createElement("div");
-                div.setAttribute("id", "code-annotation-line-highlight");
-                div.style.position = 'absolute';
-                parent.appendChild(div);
-              }
-              div.style.top = top - 2 + "px";
-              div.style.height = height + 4 + "px";
-              div.style.left = 0;
-              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-              if (gutterDiv === null) {
-                gutterDiv = window.document.createElement("div");
-                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-                gutterDiv.style.position = 'absolute';
-                const codeCell = window.document.getElementById(targetCell);
-                const gutter = codeCell.querySelector('.code-annotation-gutter');
-                gutter.appendChild(gutterDiv);
-              }
-              gutterDiv.style.top = top - 2 + "px";
-              gutterDiv.style.height = height + 4 + "px";
+            placeBand(div, el, lastEl, parent.closest("div.sourceCode") || parent);
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
             }
+            placeBand(gutterDiv, el, lastEl);
             selectedAnnoteEl = annoteEl;
           }
         };
@@ -819,6 +1061,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       }
     }
   });
+  </script>
+  <script type="application/javascript">
+  window.quartoScrollableRegionsLabels = {"code":"Scrollable code","output":"Scrollable output"};
   </script>
 </div> <!-- /content -->
 

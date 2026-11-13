@@ -15,3 +15,4 @@ format:
     includes:
         after_body: include/after_body.html
   pdf: default
+  pptx: default

@@ -14,3 +14,4 @@ format:
     theme: cosmo
     includes:
         after_body: include/after_body.html
+  pdf: default

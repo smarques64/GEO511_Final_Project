@@ -38,6 +38,12 @@ Link: https://search.earthdata.nasa.gov/search/granules?p=C3540918004-ESDIS&pg[0
 # Other: 
 Tigris County Subdivision + US State Shapefiles will be downloaded in code. 
 
+```{r}
+cdo_token <- Sys.getenv("CDO_TOKEN")
+stopifnot(nzchar(cdo_token))
+```
+
+STILL WORKING: PLACED IN HOPES IT STOPS MY CODE. NEED TO FIND WAY TO ALLOW DOWNLOAD OF RASTER WITH LOG IN INFORMATION. 
 
 ## Methods:
 
@@ -58,6 +64,8 @@ library(tidyverse)
 library(sf)
 library(dplyr)
 library(osrm)
+library(httr)
+library(jsonlite)
 ```
 
 # Part 1a: Creating Population Density Raster within defined Upstate NY Area 
@@ -111,13 +119,25 @@ plot(Pop_Rasterworld4)
 
 # Part 1b: Loading in the NYS shapefiles and transforming coordinate systems
 
+
 ```{r}
-NYS_Parks <- st_read("NYS_Park_Polygon.shp")
-NYS_DEC <- st_read("NYS_DEC_Lands.shp")
+# ==== API CALL =====
+Parks_url <- "https://services.arcgis.com/1xFZPtKn1wKC6POA/arcgis/rest/services/NY_State_Park_Properties/FeatureServer/0/query?outFields=*&where=1%3D1&f=geojson"
+
+DEC_url <- "https://services6.arcgis.com/DZHaqZm9cxOD4CWM/arcgis/rest/services/NYS_DEC_Lands/FeatureServer/0/query?outFields=*&where=1%3D1&f=geojson"
+
+NYS_Parks <- st_read(dsn = Parks_url)
+NYS_DEC <- st_read(dsn = DEC_url)
 NYS_Parks2 <- st_transform(NYS_Parks, "EPSG:4269")
 NYS_DEC2 <- st_transform(NYS_DEC, "EPSG:4269")
 ```
 Completes the task. 
+
+```{r}
+plot(NYS_Parks2)
+plot(NYS_DEC2)
+```
+
 
 # Part 2: Figuring out the number of NYS parks and DEC lands within a specified distance (82.5 miles) of each pixel and applying it to the raster cell. 
 
@@ -197,42 +217,4 @@ To be continued....
 
 
 
-# Results
 
-\[\~200 words\]
-
-Tables and figures (maps and other graphics) are carefully planned to convey the results of your analysis. Intense exploration and evidence of many trials and failures. The author looked at the data in many different ways before coming to the final presentation of the data.
-
-Show tables, plots, etc. and describe them.
-
-```{r, fig.width=6, fig.height=3, fig.cap="Map of completely random data"}
-m <- leaflet(data) %>% 
-  addTiles() %>% 
-  addCircleMarkers(~x, ~y, radius = ~size,color = ~as.factor(category)) %>% 
-  addPopups(~x[2], ~y[2], "Random popup")
-m  # a map with the default OSM tile layer
-```
-
-```{r}
-data %>% 
-  ggplot(aes(x=x,y=y,col=category))+
-  geom_point()
-```
-
-### Dygraphs Example
-
-```{r}
-library(dygraphs)
-dygraph(nhtemp, main = "New Haven Temperatures") |> 
-  dyRangeSelector(dateWindow = c("1920-01-01", "1960-01-01")) 
-```
-
-# Conclusions
-
-\[\~200 words\]
-
-Clear summary adequately describing the results and putting them in context. Discussion of further questions and ways to continue investigation.
-
-# References
-
-All sources are cited in a consistent manner

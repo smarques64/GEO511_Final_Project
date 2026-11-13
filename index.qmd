@@ -38,13 +38,6 @@ Link: https://search.earthdata.nasa.gov/search/granules?p=C3540918004-ESDIS&pg[0
 # Other: 
 Tigris County Subdivision + US State Shapefiles will be downloaded in code. 
 
-```{r}
-cdo_token <- Sys.getenv("CDO_TOKEN")
-stopifnot(nzchar(cdo_token))
-```
-
-STILL WORKING: PLACED IN HOPES IT STOPS MY CODE. NEED TO FIND WAY TO ALLOW DOWNLOAD OF RASTER WITH LOG IN INFORMATION. 
-
 ## Methods:
 
 # Part 0: Loading necessary libraries
@@ -71,7 +64,7 @@ library(jsonlite)
 # Part 1a: Creating Population Density Raster within defined Upstate NY Area 
 
 ```{r}
-Pop_RasterWorld <- rast("gpw_v4_population_count_rev11_2020_30_sec.tif")
+#Pop_RasterWorld <- rast("gpw_v4_population_count_rev11_2020_30_sec.tif")
 NYS_Counties <- tigris::county_subdivisions(state = "NY", cb = TRUE)
 United_States <- tigris::states(cb = TRUE)
 ```
@@ -98,23 +91,23 @@ United_States2 <- United_States |> filter(STUSPS %in% United_States_Keep)
 # creates united states to clip raster to with just the 6 bordering states.
 #view(United_States2)
 
-Pop_Rasterworld2 <- crop(Pop_RasterWorld, United_States2, mask = TRUE)
+#Pop_Rasterworld2 <- crop(Pop_RasterWorld, United_States2, mask = TRUE)
 ``` 
 Cropping the raster to nearby states, a warning message will be received that they do not have the same coordinate system, this is true. This first crop is done to speed up projection to match the raster coordinate system to a common system that is already used by the Tigris files. 
 
 ```{r}
-target_crs <- "EPSG:4269"
-Pop_Rasterworld3 <- project(Pop_Rasterworld2, target_crs, method = "bilinear")
-st_crs(Pop_Rasterworld3)
+#target_crs <- "EPSG:4269"
+#Pop_Rasterworld3 <- project(Pop_Rasterworld2, target_crs, method = "bilinear")
+#st_crs(Pop_Rasterworld3)
 # cropping PopRasterworld2 to Upstate NY
-Pop_Rasterworld4 <- crop(Pop_Rasterworld3, NYS_Counties2, mask = TRUE)
+#Pop_Rasterworld4 <- crop(Pop_Rasterworld3, NYS_Counties2, mask = TRUE)
 ```
 
 
 Transforms the coordinate system of the raster and crops it to the remaining NYS_counties that were not eliminated. The final line plots the population raster.
 
 ```{r}
-plot(Pop_Rasterworld4)
+#plot(Pop_Rasterworld4)
 ```
 
 # Part 1b: Loading in the NYS shapefiles and transforming coordinate systems
@@ -142,17 +135,17 @@ plot(NYS_DEC2)
 # Part 2: Figuring out the number of NYS parks and DEC lands within a specified distance (82.5 miles) of each pixel and applying it to the raster cell. 
 
 ```{r}
-Pop_cells <- 1:ncell(Pop_Rasterworld4)
-Pop_coords <- xyFromCell(Pop_Rasterworld4, Pop_cells) |> as.data.frame() |> mutate(ID = Pop_cells)
-str(Pop_coords)
-Pop_coords3 <- st_as_sf(Pop_coords, coords = c("x", "y"), crs = st_crs(target_crs))
+#Pop_cells <- 1:ncell(Pop_Rasterworld4)
+#Pop_coords <- xyFromCell(Pop_Rasterworld4, Pop_cells) |> as.data.frame() |> mutate(ID = Pop_cells)
+#str(Pop_coords)
+#Pop_coords3 <- st_as_sf(Pop_coords, coords = c("x", "y"), crs = st_crs(target_crs))
 ```
 
 Code gets the coordinates of the middle of each raster cell, along with an ID number and saves it as a an sf object. 
 
 ```{r}
-Pop_coords4 <- vect(Pop_coords3)
-Pop_coords5 <- terra::buffer(Pop_coords4, width = 132770.88)
+#Pop_coords4 <- vect(Pop_coords3)
+#Pop_coords5 <- terra::buffer(Pop_coords4, width = 132770.88)
 ```
 Applies a buffer, the width determines the range away from each point it will look for parks! (in meters) 
 
@@ -165,32 +158,32 @@ This number will very likely be modified to a lower amount (due to terrain and m
 
 WARNING: THIS WILL TAKE MULTIPLE MINUTES OR MAY NOT WORK ENTIRELY, THIS IS A LARGE PERFORMANCE. 
 ```{r}
-NYS_Parks3 <- vect(NYS_Parks2)
-Relate <- relate(Pop_coords5, NYS_Parks3, pairs = TRUE, relation = "intersects", na.rm = FALSE)
+#NYS_Parks3 <- vect(NYS_Parks2)
+#Relate <- relate(Pop_coords5, NYS_Parks3, pairs = TRUE, relation = "intersects", na.rm = FALSE)
 ```
 This code preforms a relate finding all of the pairs (x -> park1, x->park2, etc..) between a pixel and parks in range and outputs the result to a matrix. 
 
 ```{r}
-Relate2 <- as.data.frame(Relate)
-Relate3 <- Relate2 |> group_by(id.x) |> summarise(number_of_parks = n_distinct(id.y))
+#Relate2 <- as.data.frame(Relate)
+#Relate3 <- Relate2 |> group_by(id.x) |> summarise(number_of_parks = n_distinct(id.y))
 ```
 Groups the matrix by cell id and condenses each group by finding the number of distinct Y values are in each group (the number of parks tied to each cell).
 
 This gives the number of parks within range of each cell! 
 
 ```{r}
-N_NYS_Parks <- bind_cols(Pop_coords3, Relate3)
+#N_NYS_Parks <- bind_cols(Pop_coords3, Relate3)
 ```
 Binding the number of parks within range to the coordinates of each respective cell for rasterization. 
 
 ```{r}
-NYS_Raster <- rasterize(N_NYS_Parks3, Pop_Rasterworld4, field = numeric, values = N_NYS_Parks$number_of_parks)
-NYS_Raster2 <- mask(NYS_Raster, Pop_Rasterworld4)
+#NYS_Raster <- rasterize(N_NYS_Parks3, Pop_Rasterworld4, field = numeric, values = N_NYS_Parks$number_of_parks)
+#NYS_Raster2 <- mask(NYS_Raster, Pop_Rasterworld4)
 ```
 Rasterizes the point features into a raster layer using the specifications of the population raster, assigning each point to a pixel. 
 
 ```{r}
-Pop_Rasterworld6 <- c(Pop_Rasterworld4, NYS_Raster2)
+#Pop_Rasterworld6 <- c(Pop_Rasterworld4, NYS_Raster2)
 ```
 
 Combines the number of parks raster layer with the population raster layer to make one raster with 2 layers! 
@@ -198,7 +191,7 @@ Combines the number of parks raster layer with the population raster layer to ma
 This raster is currently broken and I am still trying to find the cause of the circles...
 
 ```{r}
-plot(NYS_Raster2)
+#plot(NYS_Raster2)
 ```
 
 # Part 2b: Figuring out number of NYS DEC lands in range...

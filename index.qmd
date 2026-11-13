@@ -43,13 +43,6 @@ Tigris County Subdivision + US State Shapefiles will be downloaded in code.
 # Part 0: Loading necessary libraries
 ```{r}
 #| message: false
-#install.packages("tidyterra")
-#install.packages("tigris")
-#install.packages("tidyverse")
-#install.packages("elevatr")
-#install.packages("osrm")
-#install.packages("r5r")
-#install.packages("knitr")
 
 library(tigris)
 library(terra)

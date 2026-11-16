@@ -18,7 +18,7 @@ However, what is not known is the exact degree of access different population ce
 
 3: Where does most of upstate NY fall on a distribution of population and number of parks and DEC lands within range? (does the vast majority of the state have lesser access then most rural areas or somewhere in the middle?)
 
-## Data Links (will be downloaded automatically with code)
+## Data Links (will be downloaded automatically with code) #' Peer review: Is there any chance you could condense these links into one single r code chuck?
 
 # Spatial data of NYS Park Owned Lands: 
 Download shapefile 
@@ -106,7 +106,7 @@ Transforms the coordinate system of the raster and crops it to the remaining NYS
 #plot(Pop_Rasterworld4)
 ```
 
-# Part 1b: Loading in the NYS shapefiles and transforming coordinate systems
+# Part 1b: Loading in the NYS shapefiles and transforming coordinate systems #' Peer review: on your website it still has the r message loaded on the web page. It seems like you have in the above codes turned these messages off
 
 
 ```{r}
@@ -189,7 +189,7 @@ This raster is currently broken and I am still trying to find the cause of the c
 ```{r}
 #plot(NYS_Raster2)
 ```
-
+#' Peer review: I can tell you are working with big datasets and that is a large project. If you are ever feeling stressed about not finishing this project maybe shorten your data to only looking at certain regions of New York ( Western, Upstate, Downstate (NYC)). Please only take that as a suggestion, and it is in no way a critique of your project! This looks amazaing and your doing a great job!
 # Part 2b: Figuring out number of NYS DEC lands in range...
 
 To be continued....
